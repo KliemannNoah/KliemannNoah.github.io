@@ -33,21 +33,11 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /overflow: hidden;
     background-color: #333;
 }
 
-.skills {
-    float: left;
-    background-color: #FFFFFF;
-    list-style-type: circle;
-}
 
-.skills2 {
-    float: left;
-    background-color: #FFFFFF;
-    list-style-type: circle;
-}
 
 li {
     float: left;
@@ -177,4 +167,18 @@ nav
 
 h3 {
   text-align: center;
+}
+
+.skills li{
+	float: none;
+	margin: 10;
+    padding: 10;
+    background-color: #FFFFFF;
+    list-style-type: circle;
+}
+
+.skills2 {
+    float: none;
+    background-color: #FFFFFF;
+    list-style-type: circle;
 }

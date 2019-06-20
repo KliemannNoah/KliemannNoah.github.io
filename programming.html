@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>About</title>
+<link href="css/Test.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<nav>
+	<ul>
+		<li>
+			<a href="index.html" title="Home Page">
+			Home
+			</a>
+		</li>
+		<li>
+			<a href="programming.html" title="Programming Page">
+			Programming Projects
+			</a>
+		</li>
+		<li>
+			<a href="projects.html" title="Game Projects Page">
+			Game Projects
+			</a>
+		</li>
+	</ul>
+</nav>
+<div class="content">
+
+<h2 style="text-align:center;">Personal Projects</h2>
+<hr>
+<h3 style="text-align:center;"> Reddit Orders Bot </h3>
+
+<p>
+Reddit is a online messaging board split up into units called "subreddits," each of which revolve around a different thing. I was an avid follower for the College Football Subreddit. Over the summer of 2018 they held a massive modified version of the board game Risk. Every User on the subreddit declared what team they wanted to play for, and then daily they had the option of either defending a territory held by their team or by attacking an adjacent territory held by another team. 
+</p>
+<p>
+The teams that did the best were the teams that were organizing and coordinating strategy with each other. So, I created a Python bot to help in the process. The python bot could get registered through reddit to send users messages every day. After those of us in charge of Wisconsin decided where we wanted to send our users, I could place the percentage of users per-territory into the bot and it would then send out a message to all of the users with their assignment, randomized based on the percentages provided. This bot received constant tweaks and improvements to better represent what we wanted, and helped Wisconsin place very highly in the competition.
+</p>
+<p>
+Adjustments had to be made very quickly, as the vote occurred at Midnight EST everyday, so I had to exhibit the ability to make fast changes as the game evolved on a daily basis as well as tackle some technical hurdles and forecast future needs.
+</p>
+<hr>
+<h3 style="text-align:center;"> Reddit Subreddit Scraper</h3>
+<p>
+Following the Conclusion of the Risk Game, some of the Wisconsin leaders began to realize that we would need to recruit more people for the following year if we were going to improve on the prior year's performance. To wit, I decided to scrape all of the comments from the College Football Subreddit and store the username and flair into a massive database. 
+</p>
+<p>
+Such a database is not available from reddit's end for privacy reasons, but a user who posts has stated they want to be identified as supporting the team with their flair. By checking every incoming comment to see if that user is in the database I can create a database with 1000+ badgers despite us only having around 200 people over the summer.
+This would let us keep track of all of the Wisconsin users, so that at the start of the next risk game we could message them all and gain lots of new recruits.
+</p>
+<p>
+The database is stored on a Raspberry Pi, using SQLITE 3 and info is scraped from Reddit with the PRAW API.
+</p>
+<p>
+File list: 
+<ul style="padding-left:20px; list-style-type:disc; background-color:white;" class="skills"> 
+	<li> createDB.py - this file created the database </li>
+	<li> deleteDB.py - this file will delete the database </li>
+	<li> updateDB.py - this file makes structural changes to the database </li>
+	<li> queryDB.py - this file is used for querying the database </li>
+	<li> insertPublic.py - this file is running continuosly on the Pi and inserts the users into database as it scrapes reddit. Runs via nohup </li>
+</ul>
+</p>
+<p>
+Project is still running currently.
+</p>
+</div>
+</body>
+</html>
