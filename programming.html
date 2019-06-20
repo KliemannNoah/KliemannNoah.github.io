@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>About</title>
+<title>programming</title>
 <link href="css/Test.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -40,6 +40,34 @@ The teams that did the best were the teams that were organizing and coordinating
 <p>
 Adjustments had to be made very quickly, as the vote occurred at Midnight EST everyday, so I had to exhibit the ability to make fast changes as the game evolved on a daily basis as well as tackle some technical hurdles and forecast future needs.
 </p>
+<p> Github Repository: <a href="https://github.com/KliemannNoah/Reddit-Risk"> https://github.com/KliemannNoah/Reddit-Risk </a> </p>
+
+<div class="slideshow-container">
+  <div class="mySlides1 fade" style = "display:block;">	
+    <div class="numbertext">1 / 2</div>
+    <img src="pictures/message.PNG" alt="Sample of Daily Sent Messages" class="slideshow border">
+    <div class="text">Sample of Daily Sent Messages</div>
+  </div>
+
+  <div class="mySlides1 fade" style = "display:block;">
+    <div class="numbertext">2 / 2</div>
+    <img src="pictures/status.PNG" alt="Reddit Bot Application" style="width:100%" class="slideshow border">
+    <div class="text">Reddit Bot Application </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1,0)"></span> 
+    <span class="dot" onclick="currentSlide(2,0)"></span> 
+  </div>
+</div>
+
+
+
+
+
 <hr>
 <h3 style="text-align:center;"> Reddit Subreddit Scraper</h3>
 <p>
@@ -63,8 +91,58 @@ File list:
 </ul>
 </p>
 <p>
-Project is still running currently.
+Project is still running currently, and can be found on my Github Repository at: <a href="https://github.com/KliemannNoah/RedditDatabase"> https://github.com/KliemannNoah/RedditDatabase </a>
 </p>
 </div>
+<div class="slideshow-container">
+  <div class="mySlides2 fade1" style = "display:block;">	
+    <div class="numbertext">1 / 2</div>
+    <img src="pictures/pi.PNG" alt="Remote Connection to Raspberry Pi Scraper" class="slideshow border">
+    <div class="text">Remote Connection to Raspberry Pi Scraper</div>
+  </div>
+
+  <div class="mySlides2 fade1" style = "display:block;">
+    <div class="numbertext">2 / 2</div>
+    <img src="pictures/names.PNG" alt="Small Subset of the Database" style="width:100%" class="slideshow border">
+    <div class="text">Small Subset of the Database </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1,1)"></span> 
+    <span class="dot" onclick="currentSlide(2,1)"></span> 
+  </div>
+</div>
+
+
+
+<script>
+var slideIndex = [1,1];
+/* Class the members of each slideshow group with different CSS classes */
+var slideId = ["mySlides1", "mySlides2"] 
+showSlides(1, 0);
+showSlides(1, 1);
+
+function currentSlide(n, no) {
+  showSlides(n, no);
+}
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1} 
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  x[slideIndex[no]-1].style.display = "block"; 
+}
+</script>
 </body>
 </html>

@@ -33,7 +33,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /overflow: hidden;
+    overflow: hidden;
     background-color: #333;
 }
 
@@ -67,10 +67,12 @@ li a:hover {
 
 .mySlides1 {
     display: none;
+	text-align: center;
 }
 
 .mySlides2 {
     display: none;
+	  text-align: center;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -80,11 +82,12 @@ li a:hover {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: gray;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.3);
 }
 
 /* Position the "next button" to the right */
@@ -182,3 +185,5 @@ h3 {
     background-color: #FFFFFF;
     list-style-type: circle;
 }
+
+.border { border-width: 2px;   border-color: red;   border-style: solid; max-height: 700px;} 
