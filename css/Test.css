@@ -74,6 +74,12 @@ li a:hover {
     display: none;
 	  text-align: center;
 }
+
+.mySlides3 {
+    display: none;
+	  text-align: center;
+}
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
