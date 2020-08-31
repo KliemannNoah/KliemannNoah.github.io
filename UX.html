@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>projects</title>
+<link href="css/Test.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html" title="Home Page">Home</a></li>
+        <li><a href="experience.html" title="Education and Work Experience"> Education and Work Experience</a></li>
+        <li><a href="programming.html" title="Programming Page">Scripting Projects</a></li>
+        <li><a href="games.html" title="Game Projects Page">Game Projects</a></li>
+        <li><a href="UX.html" title="UX Projects">UX Projects</a></li>
+    </ul>
+</nav>
+<div class="content">
+<h1 style="text-align:center;">UX Projects</h1>
+<hr>
+<h3 style="text-align:center;"> CryptoCounter Website</h3>
+
+<p> During 'CS 506 - Software Engineering' I worked with a team of 5 other students to create an application from scratch to adress a niche that was not yet filled. My group decided to work on a website that would keep track of Social Media metrics for cryptocurrencies, and compare them to their market growth. <p>
+
+<p> This including work from design documents to a final presentation, using 3 agile sprints to develop the application. It required work on handling the front end websight design and layout, heavy background API scripting and Scraping, and a solid backend infastructure to connect the two. We used Heroku to host the website, and django which had a Model-View-Template Architecture. The Site was made by the end of the semester, but was taken down shortly after the free trial expired, as no one wished to continue fleshing out the project from what it already was. </p>
+
+<p> I worked primarily on the front end website development, using the Bootstrap Framework and HTML5/CSS3, in addition to Python and Javascript for some functionalities. </p>
+
+<p> Github Repository: <a href="https://github.com/KliemannNoah/CryptoCounter"> https://github.com/KliemannNoah/CryptoCounter </a>
+
+
+<div class="slideshow-container">
+  <div class="mySlides1 fade" style = "display:block;">	
+    <div class="numbertext">1 / 4</div>
+    <img src="pictures/FrontPage.png" alt="Front Page of the Website" class="slideshow border">
+    <div class="text">Front Page of the Website</div>
+  </div>
+
+  <div class="mySlides1 fade" style = "display:block;">
+    <div class="numbertext">2 / 4</div>
+    <img src="pictures/ICOPage.png" alt="Displays a Single Crytpocurrencies Metrics" style="width:100%" class="slideshow border">
+    <div class="text">ICO Tracking Page </div>
+  </div>
+  
+  <div class="mySlides1 fade" style = "display:block;">
+    <div class="numbertext">3 / 4</div>
+    <img src="pictures/WatchList.png" alt="Watchlist of Coins and ICO's" style="width:100%" class="slideshow border">
+    <div class="text">User Personalized Watchlist</div>
+  </div>
+  
+   <div class="mySlides1 fade" style = "display:block;">
+    <div class="numbertext">4 / 4</div>
+    <img src="pictures/ERDiagram.png" alt="Entity Relation Diagram" style="width:100%" class="slideshow border">
+    <div class="text">Entity Relation Diagram </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1,0)"></span> 
+    <span class="dot" onclick="currentSlide(2,0)"></span> 
+    <span class="dot" onclick="currentSlide(3,0)"></span> 
+    <span class="dot" onclick="currentSlide(4,0)"></span> 
+  </div>
+</div>
+</div>
+<script>
+var slideIndex = [1,1,1];
+/* Class the members of each slideshow group with different CSS classes */
+var slideId = ["mySlides1", "mySlides2", "mySlides3"] 
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+
+function currentSlide(n, no) {
+  showSlides(n, no);
+}
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1} 
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  x[slideIndex[no]-1].style.display = "block"; 
+}
+</script>
+</body>
+</html>
